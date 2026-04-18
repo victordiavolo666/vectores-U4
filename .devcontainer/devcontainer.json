@@ -1,0 +1,29 @@
+{
+  "name": "Entorno Java con Panel de Git",
+  "image": "mcr.microsoft.com/devcontainers/java:21",
+  
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {
+      "version": "latest"
+    }
+  },
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-java-pack"
+      ],
+      "settings": {
+        // Mantiene desactivadas las ayudas de Copilot
+        "github.copilot.enable": {
+          "*": false
+        },
+        "editor.inlineSuggest.enabled": false,
+        
+        // Habilita el panel lateral en su posición estándar (izquierda)
+        "workbench.activityBar.location": "default",
+        "workbench.sideBar.location": "left"
+      }
+    }
+  }
+}
